@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.0.2</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.project</groupId>
+    <artifactId>spring-template</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging> <!-- 루트 aggregator로 변경 -->
+    <name>spring-template</name>
+    <description>spring-template (Multi-module root)</description>
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <!-- 하위 모듈 목록: 실제 모듈 폴더명에 맞게 수정 -->
+    <modules>
+        <module>core</module>      <!-- 공통 모듈 예시 -->
+        <module>plugins/kcredit</module>  <!-- 플러그인 모듈 예시 -->
+    </modules>
+
+    <!-- 중앙 의존성 관리: 하위 모듈에서 version 생략 가능 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- 루트 빌드 플러그인: 필요 시 추가 (현재 최소화) -->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- 하위 모듈에서 spring-boot-maven-plugin 사용 시 version 상속 -->
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>

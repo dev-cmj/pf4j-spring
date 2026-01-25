@@ -1,0 +1,2 @@
+pf4j:
+    plugins-dir: ${user.dir}/core/plugins
