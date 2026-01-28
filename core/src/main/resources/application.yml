@@ -1,2 +1,6 @@
-pf4j:
-    plugins-dir: ${user.dir}/core/plugins
+spring:
+    sbp:
+        runtimeMode: deployment
+        enabled: true
+        plugins-root: ${user.dir}/core/plugins
+

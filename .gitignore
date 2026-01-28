@@ -1,10 +1,24 @@
-HELP.md
+# --- 빌드 결과물 관련 ---
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+bin/
+build/
+out/
 
-### STS ###
+# 플러그인 개발 시 생성되는 최종 JAR 파일 (배포용 외에는 제외)
+# 만약 코어 프로젝트의 plugins/ 폴더에 직접 빌드 결과물을 복사한다면 제외 설정 필요
+**/plugins/*.jar
+*.jar
+
+# --- Maven & Gradle 관련 ---
+.mvn/
+mvnw
+mvnw.cmd
+.gradle/
+gradlew
+gradlew.cmd
+**/maven-wrapper.jar
+
+# --- IDE 설정 (STS / Eclipse) ---
 .apt_generated
 .classpath
 .factorypath
@@ -13,21 +27,24 @@ target/
 .springBeans
 .sts4-cache
 
-### IntelliJ IDEA ###
-.idea
+# --- IDE 설정 (IntelliJ IDEA) ---
+.idea/
 *.iws
 *.iml
 *.ipr
+out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
+# --- IDE 설정 (VS Code) ---
+.vscode/
+.history/
+*.code-workspace
+
+# --- OS 및 로그 관련 ---
+*.log
+.DS_Store
+Thumbs.db
+
+!**/src/main/**/target/
+!**/src/test/**/target/
 !**/src/main/**/build/
 !**/src/test/**/build/
-
-### VS Code ###
-.vscode/

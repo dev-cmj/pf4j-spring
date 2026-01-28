@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.2</version>
+        <version>3.5.9</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.project</groupId>
@@ -22,6 +22,7 @@
     <modules>
         <module>core</module>      <!-- 공통 모듈 예시 -->
         <module>plugins/kcredit</module>  <!-- 플러그인 모듈 예시 -->
+        <module>plugins/hyundai</module>  <!-- 플러그인 모듈 예시 -->
     </modules>
 
     <!-- 중앙 의존성 관리: 하위 모듈에서 version 생략 가능 -->

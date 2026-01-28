@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pluginName}">Plugin Home</title>
+    <link th:href="@{/hyundai-plugin/css/plugin.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 th:text="${pluginName}">Plugin Name</h1>
+    <span class="badge" th:text="'Version ' + ${version}">Version</span>
+
+    <p class="description" th:text="${description}">Description</p>
+
+    <div class="info-box">
+        <strong>Plugin Status:</strong> Active and Running<br>
+        <strong>Type:</strong> <span th:text="${pluginType}">Credit Verification</span><br>
+        <strong>Integration:</strong> Spring Boot Plugin Framework (SBP)<br>
+        <strong>Provider:</strong> <span th:text="${provider}">Hyundai</span>
+    </div>
+
+    <div class="links">
+        <a th:href="@{/plugin/hyundai/features}">View Features</a>
+        <a th:href="@{/plugin/hyundai/credit-check}">API Test</a>
+        <a href="/" class="back-link">← Back to Main App</a>
+    </div>
+</div>
+</body>
+</html>

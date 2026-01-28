@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${pluginName}">Plugin Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background-color: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .description {
+            color: #555;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .info-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-left: 4px solid #667eea;
+            margin: 20px 0;
+        }
+        .links {
+            margin-top: 30px;
+        }
+        a {
+            display: inline-block;
+            margin: 10px 10px 10px 0;
+            padding: 10px 20px;
+            background-color: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #5568d3;
+        }
+        .back-link {
+            background-color: #95a5a6;
+        }
+        .back-link:hover {
+            background-color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 th:text="${pluginName}">Plugin Name</h1>
+        <span class="badge" th:text="'Version ' + ${version}">Version</span>
+
+        <p class="description" th:text="${description}">Description</p>
+
+        <div class="info-box">
+            <strong>Plugin Status:</strong> Active and Running<br>
+            <strong>Type:</strong> Credit Verification Plugin<br>
+            <strong>Integration:</strong> Spring Boot Plugin Framework
+        </div>
+
+        <div class="links">
+            <a href="/plugin/kcredit/features">View Features</a>
+            <a href="/plugin/kcredit/credit-check">API Test</a>
+            <a href="/" class="back-link">Back to Main App</a>
+        </div>
+    </div>
+</body>
+</html>

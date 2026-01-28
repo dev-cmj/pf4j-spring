@@ -40,16 +40,34 @@
         </dependency>
 
         <dependency>
-            <groupId>org.pf4j</groupId>
-            <artifactId>pf4j</artifactId>
-            <version>3.14.1</version>
-            <scope>compile</scope>
+            <groupId>org.laxture</groupId>
+            <artifactId>sbp-spring-boot-starter</artifactId>
+            <version>3.5.27</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.laxture</groupId>
+            <artifactId>sbp-spring-boot-thymeleaf-starter</artifactId>
+            <version>3.5.27</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-webmvc</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.42</version>
+            <scope>compile</scope>
+        </dependency>
+
     </dependencies>
 
     <!-- plugin 제거: core는 라이브러리 jar만 빌드 -->

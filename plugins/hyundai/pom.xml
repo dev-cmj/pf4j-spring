@@ -11,15 +11,15 @@
     </parent>
 
     <groupId>com.project</groupId>
-    <artifactId>kcredit</artifactId>
+    <artifactId>hyundai</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>kcredit-plugin</name>
-    <description>Kcredit Custom Logic Plugin</description>
+    <name>hyundai-plugin</name>
+    <description>Hyundai Custom Logic Plugin</description>
 
     <properties>
         <java.version>21</java.version>
-        <plugin.id>kcredit-plugin</plugin.id>
-        <plugin.class>com.project.kcredit.DemoPlugin</plugin.class>
+        <plugin.id>hyundai-plugin</plugin.id>
+        <plugin.class>com.project.hyundai.HyundaiPlugin</plugin.class>
         <plugin.version>0.0.1</plugin.version>
         <plugin.provider>Chan</plugin.provider>
     </properties>
