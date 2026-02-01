@@ -63,7 +63,6 @@ public class PluginController {
 
     @PostMapping("/{pluginId}/start")
     public ResponseEntity<Void> startPlugin(@PathVariable String pluginId) {
-        // 플러그인을 시작하고 상태를 반환
         PluginState state = pluginManager.startPlugin(pluginId);
         return state == PluginState.STARTED ? ResponseEntity.ok().build() : ResponseEntity.internalServerError().build();
     }
